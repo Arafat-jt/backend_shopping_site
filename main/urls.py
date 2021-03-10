@@ -20,7 +20,23 @@ from . import views
 urlpatterns = [
     path("men/", views.func_men, name="men's list"),
     path("women/", views.func_women, name="women's list"),
-    path("userlogin/", views.user_login, name="user login"),
-    path("usersignup/", views.user_signup, name="user sign up"),
+
+    path("mendb/", views.mens_wear, name="men's db collection"),
+    path("womendb/", views.womens_wear, name="women's db collection"),
+    path("othersdb/", views.fun_others, name="others db collection"),
+    path("elecdb/", views.fun_elec, name="electronics db collection"),
+    path("watchesdb/", views.fun_watches, name="watches db collection"),
+    path("jacketsdb/", views.fun_jackets, name="Jackets db collection"),
+
+
+
+    path("userlogin/", views.user_login, name="user login from DB"),
+    path("usersignup/", views.user_signup, name="user sign up from DB"),
+    path("updateprofile/", views.user_update, name="updates user's credentials"),
+
+
+    path("addtocart/", views.addtocart, name="adds a product to user collection"),
+    path("mycart/", views.mycart, name="returns all products for a user"),
+
     path("", views.index, name="go no where"),
 ]
